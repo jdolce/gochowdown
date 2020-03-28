@@ -24,7 +24,21 @@
     </header>
 
     <div class="px2 mt3 clearfix">
-      <div class="sm-col-8 mx-auto" itemprop="description">{{.Content}}</div>
+      <div class="sm-col-8 mx-auto" itemprop="description">{{ .Description }}</div>
+    </div>
+    <div class="px2 mt3 clearfix" style="text-align: center;">
+      <div class="sm-col sm-col-4 lg-col-4">
+        <div class="sm-col-12" style="font-weight:bold;" >Yields</div>
+        <span>{{ .Params.Yield }}</span>
+      </div>
+      <div class="sm-col sm-col-4 lg-col-4">
+        <div class="sm-col-12" style="font-weight:bold;">Prep Time</div>
+        <span align="center">{{ .Params.PrepTime }}</span>
+      </div>
+      <div class="sm-col sm-col-4 lg-col-4">
+        <div class="sm-col-12" style="font-weight:bold;">Cook Time</div>
+        <span>{{ .Params.CookTime }}</span>
+      </div>
     </div>
 
     <!-- call up recipe and directions -->
