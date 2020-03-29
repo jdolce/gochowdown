@@ -138,7 +138,9 @@
     {{ with .Params.Category }}{{ partial "taxonomy/category" . }}{{ end }}
     {{ with .Params.Cuisine }}{{ partial "taxonomy/cuisine" . }}{{ end }}
     {{ with .Params.Tags }}{{ partial "taxonomy/tags" . }}{{ end }}
-
+    <div class="tags">
+      <p>Original: <a href="{{ .Params.sourceURL }}"><span itemprop="keyword">{{ .Params.sourceName }}</span></a></p>
+    </div>
   </article>
 </div>
 {{ end }}
